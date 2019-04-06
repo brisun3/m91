@@ -11,11 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
 // Route::get('/', function () {
 //   return view('welcome');
 // });
@@ -57,4 +52,3 @@ Route::get('/createTbl', 'CreateTblController@createTbl');
 //dd(resolve('App\Billing\Stripe'));
 Route::get('/dook', 'TestController@doAwesome');
 Route::get('/email', 'HelpsController@email')->name('sendEmail');
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66

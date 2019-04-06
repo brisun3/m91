@@ -28,15 +28,10 @@ class RegisterController extends Controller
      *
      * @var string
      */
-<<<<<<< HEAD
-    protected $redirectTo = '/home';
-=======
-<<<<<<< HEAD
+
+
     protected $redirectTo = '/dashboard';
-=======
-    protected $redirectTo = '/home';
->>>>>>> 0e984abf5beb29d03b5b5167e7cf4e37c0f627f9
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
+
 
     /**
      * Create a new controller instance.
@@ -57,24 +52,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-<<<<<<< HEAD
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-=======
-<<<<<<< HEAD
-            'name' => 'required|string|max:255',
-            'ucountry' => 'required|max:255',
-            'utype' => 'required',
-            'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-=======
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
->>>>>>> 0e984abf5beb29d03b5b5167e7cf4e37c0f627f9
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
+
+            'name' => ['required','string','max:255'],
+            'ucountry' => ['required','max:255'],
+            'utype' => ['required'],
+            'username' => ['required','string','max:255','unique:users'],
+            'email' => ['required','string','email','max:255','unique:users'],
+            'password' => ['required','string','min:7','confirmed'],
+                        
         ]);
     }
 
@@ -88,15 +73,12 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
             'ucountry' => $data['ucountry'],
             'utype' => $data['utype'],
             'username' => $data['username'],
-=======
->>>>>>> 0e984abf5beb29d03b5b5167e7cf4e37c0f627f9
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
+
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

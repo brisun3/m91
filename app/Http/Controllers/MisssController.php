@@ -139,7 +139,7 @@ class MisssController extends Controller
             //$miss->expire_at = date('Y-m-d', strtotime(' + 2months'));
             //$post->cover_image = $fileNameToStore;
             $miss->user_id = auth()->user()->id;
-
+           
             $miss->save();
 
 
@@ -155,14 +155,16 @@ class MisssController extends Controller
             $status->status= 'free';
             $status->expire_at = date('Y-m-d', strtotime(' + 2months'));
             $status->last_update=date("Y-m-d");
+            
             $status->save();
+            
 
 
 
             //email to miss
             
             
-            Mail::to(Auth::user()->email)->send(new EmailClass('regConf.missReg',$uname));
+           // Mail::to(Auth::user()->email)->send(new EmailClass('regConf.missReg',$uname));
             
     
        //////

@@ -16,15 +16,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-<<<<<<< HEAD
-        'name', 'email', 'password',
-=======
-<<<<<<< HEAD
+
         'name', 'ucountry','utype','email', 'password','username'
-=======
-        'name', 'email', 'password',
->>>>>>> 0e984abf5beb29d03b5b5167e7cf4e37c0f627f9
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
+
     ];
 
     /**
@@ -35,9 +29,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
     public function posts(){
         return $this->hasMany('App\Post');
     }
@@ -50,19 +50,7 @@ class User extends Authenticatable
     public function baoyangs(){
         return $this->hasMany('App\Baoyang');
     }
-=======
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-<<<<<<< HEAD
-=======
->>>>>>> 0e984abf5beb29d03b5b5167e7cf4e37c0f627f9
->>>>>>> 20ea42017d45b958f4be186ecdc3e5440e876a66
+    
+
 }
