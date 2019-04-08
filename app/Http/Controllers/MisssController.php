@@ -75,7 +75,7 @@ class MisssController extends Controller
             'city' => 'required',
             'tel' => 'required',
             'intro' => 'required',
-            'age' => 'required',
+            'age' => 'required'
             //'img_name'=>'image|nullable'
             //'image|mimes:jpeg,bmp,png|size:2000'
         ]);
