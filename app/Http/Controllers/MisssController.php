@@ -74,7 +74,8 @@ class MisssController extends Controller
         $this->validate($request, [
             'city' => 'required',
             'tel' => 'required',
-            'intro' => 'required'
+            'intro' => 'required',
+            'age' => 'required',
             //'img_name'=>'image|nullable'
             //'image|mimes:jpeg,bmp,png|size:2000'
         ]);
@@ -139,7 +140,26 @@ class MisssController extends Controller
             //$miss->expire_at = date('Y-m-d', strtotime(' + 2months'));
             //$post->cover_image = $fileNameToStore;
             $miss->user_id = auth()->user()->id;
-           
+            /////
+            $miss->age = $request->input('age');
+            $miss->national = $request->input('national');
+            $miss->shape = $request->input('shape');
+            $miss->skin = $request->input('skin');
+            $miss->height = $request->input('height');
+            $miss->chest = $request->input('chest');
+            $miss->waist = $request->input('waist');
+            $miss->weight = $request->input('weight');
+
+            $miss->lan1 = $request->input('lan1');
+            $miss->lan2 = $request->input('lan2');
+            $miss->price30 = $request->input('price30');
+            $miss->price1h = $request->input('price1h');
+            $miss->price_out = $request->input('price_out');
+            $miss->price_note = $request->input('price_note');
+            $miss->service_des = $request->input('service_des');
+            $miss->special_serv = $request->input('special_serv');
+            $miss->western_serv = $request->has('western_serv');
+            
             $miss->save();
 
 

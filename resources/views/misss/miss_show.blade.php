@@ -140,7 +140,7 @@
       <p>主要服务：{{$post->service_des}}</p>
       <p>特色服务：{{$post->special_serv}}</p>
       @if($post->western_serv==0)
-          <p>该女生不对洋人服务。</p>
+          <p>该女生不接待西方人。</p>
       @endif
   </div>
       
